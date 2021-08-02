@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_border_width" type="dimen">0.02dp</item>
+</resources>

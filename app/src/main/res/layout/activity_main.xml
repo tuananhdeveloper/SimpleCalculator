@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <EditText
+        android:id="@+id/text_expression"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_result"
+        app:layout_constraintTop_toBottomOf="@id/text_expression"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        />
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_result"
+        android:stretchColumns="*"
+        >
+
+        <TableRow android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_clear"
+                android:background="@drawable/btn_action"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:onClick="handleActionBtnClick"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_divide"
+                android:background="@drawable/btn_operator"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:onClick="handleOperatorBtnClick"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_multiply"
+                android:background="@drawable/btn_operator"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:onClick="handleOperatorBtnClick"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_delete"
+                android:background="@drawable/btn_action"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:onClick="handleActionBtnClick"
+                />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_seven"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_number"
+                android:onClick="handleNumberBtnClick"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_eight"
+                android:background="@drawable/btn_number"
+                android:layout_height="match_parent"
+                android:onClick="handleNumberBtnClick"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_nine"
+                android:background="@drawable/btn_number"
+                android:layout_height="match_parent"
+                android:onClick="handleNumberBtnClick"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_sub"
+                android:background="@drawable/btn_operator"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:onClick="handleOperatorBtnClick"
+                />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_four"
+                android:background="@drawable/btn_number"
+                android:layout_height="match_parent"
+                android:onClick="handleNumberBtnClick"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_five"
+                android:background="@drawable/btn_number"
+                android:layout_height="match_parent"
+                android:onClick="handleNumberBtnClick"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/text_six"
+                android:background="@drawable/btn_number"
+                android:layout_height="match_parent"
+                android:onClick="handleNumberBtnClick"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton android:text="@string/text_add"
+                android:background="@drawable/btn_operator"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:onClick="handleOperatorBtnClick"
+                />
+
+        </TableRow>
+
+        <TableRow android:layout_weight="2">
+            <TableLayout android:layout_height="match_parent">
+                <TableRow android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="@string/text_one"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_number"
+                        android:layout_height="match_parent"
+                        android:onClick="handleNumberBtnClick"
+
+                        />
+                </TableRow>
+                <TableRow android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="@string/text_percent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_number"
+                        android:layout_height="match_parent"
+                        android:onClick="handleNumberBtnClick"
+                        />
+                </TableRow>
+            </TableLayout>
+            <TableLayout android:layout_height="match_parent">
+                <TableRow android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="@string/text_two"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_number"
+                        android:layout_height="match_parent"
+                        android:onClick="handleNumberBtnClick"
+
+                        />
+                </TableRow>
+                <TableRow android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="@string/text_zero"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_number"
+                        android:layout_height="match_parent"
+                        android:onClick="handleNumberBtnClick"
+
+                        />
+                </TableRow>
+            </TableLayout>
+            <TableLayout android:layout_height="match_parent">
+                <TableRow android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="@string/text_three"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_number"
+                        android:layout_height="match_parent"
+                        android:onClick="handleNumberBtnClick"
+
+                        />
+                </TableRow>
+                <TableRow android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="@string/text_point"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_number"
+                        android:layout_height="match_parent"
+                        android:onClick="handleNumberBtnClick"
+                        />
+                </TableRow>
+            </TableLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_equality"
+                android:onClick="handleActionBtnClick"
+                android:text="@string/text_equality"
+                android:textColor="@color/white" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
