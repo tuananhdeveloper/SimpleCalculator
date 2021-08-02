@@ -4,5 +4,5 @@
     <stroke android:color="@color/black"
         android:width="@dimen/btn_border_width"/>
 
-    <solid android:color="@color/gray1"/>
+    <solid android:color="@color/gallery"/>
 </shape>

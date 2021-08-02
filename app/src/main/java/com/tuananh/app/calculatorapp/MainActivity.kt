@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-
     fun handleNumberBtnClick(v: View) {
         var button = v as Button
         appendTextToExpressionText(button.text.toString())
@@ -69,7 +68,6 @@ class MainActivity : AppCompatActivity() {
         text_expression.setText("")
         text_result.setText("")
     }
-
 
     private fun appendTextToExpressionText(text: String) {
         text_expression.append(text)

@@ -3,12 +3,15 @@ package com.tuananh.app.calculatorapp
 import java.util.Stack
 class Calculator {
 
-    private val multiply = "*"
-    private val divide = "/"
-    private val add = "+"
-    private val subtract = "-"
-    private val leftParenthesis = "("
-    private val rightParenthesis = ")"
+    companion object {
+        private const val multiply = "*"
+        private const val divide = "/"
+        private const val add = "+"
+        private const val subtract = "-"
+        private const val leftParenthesis = "("
+        private const val rightParenthesis = ")"
+    }
+
     private val valueStack: Stack<Double> = Stack()
     private val operatorStack: Stack<String> = Stack()
 
