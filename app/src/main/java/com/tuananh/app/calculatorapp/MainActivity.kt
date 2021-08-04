@@ -21,17 +21,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun handleNumberBtnClick(v: View) {
-        var button = v as Button
+        val button = v as Button
         appendTextToExpressionText(button.text.toString())
     }
 
     fun handleOperatorBtnClick(v: View) {
-        var button = v as Button
+        val button = v as Button
         appendTextToExpressionText(button.text.toString())
     }
 
     fun handleActionBtnClick(v: View) {
-        var button = v as Button
+        val button = v as Button
         when(button.text.toString()) {
             getString(R.string.text_clear) -> clearScreen()
             getString(R.string.text_delete) -> delete()
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 .replace(getString(R.string.text_divide), " $divide ")
                 .replace(getString(R.string.text_point), point)
             try {
-                var result = Calculator().cal(expression)
+                val result = Calculator().cal(expression)
                 text_result.setText(result.toString())
             }
             catch (e: Exception) {
